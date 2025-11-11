@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Art Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+
+
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="bt.css">
+  <link rel="stylesheet" href="stylehelp.css">
+  <link rel="stylesheet" href="shil.css">
+
+
+  
+
+  <meta name="theme-color" content="#0a0a0a">
+</head>
+<body>
+  <link rel="icon" href="image/logo.png" type="image/x-icon">
+
+  <header>
+  <div class="logo" aria-label="The Art Gallery logo">
+    <img src="image/logo.png" alt="The Art Gallery logo" width="36" height="36" loading="lazy">
+    <span class="brand">THE ART GALLERY</span>
+  </div>
+
+  <!-- 🔍 Динамический поиск -->
+  <div class="search-container" role="search">
+    <label for="gallery-search" class="visually-hidden">   </label>
+    <input 
+      type="text" 
+      id="gallery-search" 
+      class="search-input" 
+      placeholder="Search artworks, artists…"
+      aria-describedby="search-hint"
+    >
+    <div id="search-hint" class="search-hint" aria-live="polite"></div>
+  </div>
+
+  <nav>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+    <ul id="main-nav" class="nav-list">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#ext">Exhibitions</a></li>
+      <li><a href="#book">Book</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <div class="slide-out left" id="slide1">
+          <button class="toggle" id="slideToggle" aria-expanded="false" aria-controls="slidePanel">≡</button>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  
+  <main class="hero" id="home">
+    <div class="hero-inner">
+      <h1>ART THAT SPEAKS WITHOUT WORDS</h1>
+      <p class="subtitle">Curated exhibitions - timeless masterpieces.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#look" role="button">Explore Now</a>
+        <a class="btn btn-outline" href="#ext" role="button">Exhibitions</a>
+      </div>
+    </div>
+
+    <div class="scroll-down" aria-hidden="true"></div>
+  </main>
+
+
+<main class="page2">
+  
+<div class="gallery-container">
+<div class="left-wall">
+  <img 
+    id="left1" 
+    src="image/picIMARRY.png" 
+    
+    alt="The Unequal Marriage" 
+    class="art-card card1" 
+    loading="lazy"
+    data-search="the unequal marriage vasily fedotov russian realism 19th century wedding social critique"
+  >
+  
+  <img 
+    id="left2" 
+    src="image/picTSS.png" 
+    alt="Christ in the Storm on the Sea of Galilee" 
+    class="art-card card2" 
+    loading="lazy"
+    data-search="christ in the storm on the sea of galilee rembrandt baroque biblical miracle sea storm"
+  >
+  
+  <img 
+    id="left3" 
+    src="image/picmood.png" 
+    alt="The Scream" 
+    class="art-card card3" 
+    loading="lazy"
+    data-search="the scream edvard munch expressionism anxiety norway iconic"
+  >
+  
+  <div class="iconext">
+    <i id="prevBtn" class="bi bi-arrow-left-circle"></i>
+  </div>
+  </div>
+</div>
+
+  
+  <img 
+  id="mainPic" 
+  src="image/picW.png" 
+  alt="Girl with a Pearl Earring" 
+  class="main-pic" 
+  loading="lazy"
+  data-search="girl with a pearl earring johannes vermeer dutch golden age portrait"
+>
+  
+  <div class="right">
+    <h2 id="artTitle">Girl with a Pearl Earring</h2>
+    <blockquote id="artQuote">…</blockquote>
+    <p class="translation" id="artDesc">…</p>
+  </div>
+</div>
+</main>
+
+
+
+
+
+
+
+
+
+<section class="ext-body" id="ext">
+  <section class="exhibitions-list">
+    <div class="container">
+      <h1 class="page-title">EXHIBITIONS</h1>
+
+      <table class="exhibitions-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Tickets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>26.11.2025</td>
+            <td><i class="bi bi-geo-alt-fill"></i> Tokyo Mirror Hall Exhibition</td>
+            <td>Feel the silence between the colors.</td>
+            <td>
+              <img src="image/pincard1.png" alt="Exhibition Image" loading="lazy" width="120">
+            </td>
+            <td><button class="ticket-btn">Get Tickets</button></td>
+          </tr>
+
+          <tr>
+            <td>15.05.2026</td>
+            <td><i class="bi bi-geo-alt-fill"></i> New York EYL of the Blessed Art Center</td>
+            <td>A celebration of art, passion, and human connection.</td>
+            <td>
+              <img src="image/pincard2.png" alt="Gallery Scene" loading="lazy" width="120">
+            </td>
+            <td><button class="ticket-btn">Get Tickets</button></td>
+          </tr>
+
+          <tr>
+            <td>19.06.2026</td>
+            <td><i class="bi bi-geo-alt-fill"></i> New York EYL of the Blessed Art Center</td>
+            <td>
+              Experience an evening where creativity meets emotion.<br>
+              Explore timeless masterpieces and discover new voices in art.
+            </td>
+            <td>
+              <img src="image/pincard3.png" alt="Red Wall Gallery" loading="lazy" width="120">
+            </td>
+            <td><button class="ticket-btn">Get Tickets</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>
+
+<section id="vertical-gallery" class="vertical-gallery">
+  <div class="gallery-controls">
+    <div class="filters">
+      <button class="filter-btn active" data-filter="">All</button>
+      <button class="filter-btn" data-filter="interior">Bold Colors & Energy</button>
+      <button class="filter-btn" data-filter="architecture">Romance & Mystery</button>
+      <button class="filter-btn" data-filter="portrait">Serenity & Nature</button>
+    </div>
+    <div class="filter-hint" id="filterHint" aria-live="polite"></div>
+  </div>
+
+  <div class="gallery-rail" id="galleryRail" tabindex="0">
+    <!-- slides will be injected here from JS -->
+  </div>
+</section>
+
+<!-- Lightbox overlay -->
+<div id="lbOverlay" class="lb-overlay" style="display:none;">
+  <button class="lb-close" aria-label="Close">&times;</button>
+  <button class="lb-prev" aria-label="Previous">&#10094;</button>
+  <div class="lb-content">
+    <img id="lbImage" src="" alt="" loading="lazy">
+    <div class="lb-caption">
+      <h3 id="lbTitle"></h3>
+      <p id="lbDesc"></p>
+    </div>
+  </div>
+  <button class="lb-next" aria-label="Next">&#10095;</button>
+</div>
+
+
+
+<section class="aaa" id="book">
+  <div class="container">
+    <div class="ticket-form">
+      <h2>BOOK YOUR TICKET</h2>
+
+      <form id="bookingForm" novalidate>
+        <div class="row g-3">
+
+          <div class="col-md-6 form-group">
+            <label for="name" class="form-label">Enter Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Cameron Williamson" required>
+            <div class="input-feedback" id="nameFeedback" aria-live="polite"></div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <label for="email" class="form-label">Enter Your Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="cameron.williamson@gmail.com" required>
+            <div class="input-feedback" id="emailFeedback" aria-live="polite"></div>
+          </div>
+
+          <div class="col-md-4 form-group">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="date" name="date" required>
+            <div class="input-feedback" id="dateFeedback" aria-live="polite"></div>
+          </div>
+
+          <div class="col-md-4 form-group">
+            <label for="time" class="form-label">Time</label>
+            <select class="form-select" id="time" name="time" required>
+              <option value="">Select Time</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+            </select>
+            <div class="input-feedback" id="timeFeedback" aria-live="polite"></div>
+          </div>
+
+          <div class="col-md-4 form-group">
+            <label for="phone" class="form-label">Contact Number</label>
+            <div class="input-group">
+              <select class="form-select" id="countryCode" name="countryCode" aria-label="Country code">
+                <option>+1</option>
+                <option selected>+7</option>
+                <option>+44</option>
+              </select>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="(777) 123-4567" required>
+            </div>
+            <div class="input-feedback" id="phoneFeedback" aria-live="polite"></div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <label for="adults" class="form-label">Adults</label>
+            <select class="form-select" id="adults" name="adults" required>
+              <option value="">Select</option>
+              <option value="1">1</option>
+              <option value="3" selected>3</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+            </select>
+            <div class="input-feedback" id="adultsFeedback" aria-live="polite"></div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <label for="children" class="form-label">Children</label>
+            <select class="form-select" id="children" name="children" required>
+              <option value="">Select</option>
+              <option value="0">0</option>
+              <option value="2">2</option>
+              <option value="4" selected>4</option>
+              <option value="6">6</option>
+            </select>
+            <div class="input-feedback" id="childrenFeedback" aria-live="polite"></div>
+          </div>
+
+          <!-- message field (требование 'message') -->
+          <div class="col-12 form-group">
+            <label for="message" class="form-label">Notes / Message</label>
+            <textarea id="message" name="message" class="form-control" rows="3" placeholder="Any requests or notes..." required></textarea>
+            <div class="input-feedback" id="messageFeedback" aria-live="polite"></div>
+          </div>
+
+          <!-- password fields (для индикатора силы и подтверждения) -->
+          <div class="col-md-6 form-group">
+            <label for="password" class="form-label">Create Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Create a password" required aria-describedby="pwdHelp">
+            <div class="pwd-meter" id="pwdMeter" aria-hidden="true">
+              <span class="bar" id="bar1"></span>
+              <span class="bar" id="bar2"></span>
+              <span class="bar" id="bar3"></span>
+            </div>
+            <div class="input-feedback" id="passwordFeedback" aria-live="polite"></div>
+            <small id="pwdHelp" class="form-text">Use at least 8 chars with letters and numbers for strong password.</small>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm password" required>
+            <div class="input-feedback" id="confirmFeedback" aria-live="polite"></div>
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn-book ticket-btn">BOOK NOW!</button>
+      </form>
+
+      
+      <div id="successMessage" role="status" aria-live="polite" style="display:none; margin-top:16px;">
+        <strong>Success!</strong> Your booking request has been validated (demo). We would normally send this to the server.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ---------- Modal: Exhibition Details / Edit ---------- -->
+<div id="exhibitModal" class="exhibit-modal" aria-hidden="true" role="dialog" aria-labelledby="exhibitTitle">
+  <div class="exhibit-modal__backdrop"></div>
+  <div class="exhibit-modal__panel" role="document">
+    <header class="exhibit-modal__header">
+      <h3 id="exhibitTitle">Exhibition details</h3>
+      <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+    </header>
+
+    <div class="exhibit-modal__body">
+      <!-- display mode -->
+      <div class="view-mode">
+        <div class="modal-row">
+          <strong>Date:</strong> <span id="modalDate"></span>
+        </div>
+        <div class="modal-row">
+          <strong>Location:</strong> <span id="modalLocation"></span>
+        </div>
+        <div class="modal-row">
+          <strong>Description:</strong>
+          <p id="modalDescription" class="modal-desc"></p>
+        </div>
+        <div class="modal-row modal-image-wrap">
+          <img id="modalImage" src="" alt="Exhibit image" loading="lazy">
+        </div>
+      </div>
+
+      <!-- edit mode (hidden until Edit pressed) -->
+      <form id="modalEditForm" class="edit-mode" style="display:none;" novalidate>
+        <label>Date
+          <input type="date" id="editDate" class="form-control">
+        </label>
+        <label>Location
+          <input type="text" id="editLocation" class="form-control" placeholder="Location name">
+        </label>
+        <label>Description
+          <textarea id="editDescription" class="form-control" rows="3"></textarea>
+        </label>
+        <label>Image URL
+          <input type="text" id="editImage" class="form-control" placeholder="image/pincard1.png">
+        </label>
+        <div class="input-feedback" id="modalEditFeedback" style="display:none;color:#f0b0a0;margin-top:8px"></div>
+      </form>
+    </div>
+
+    <footer class="exhibit-modal__footer">
+      <div class="modal-actions-left">
+        <button id="btnEdit" class="ticket-btn">Edit</button>
+        <button id="btnSave" class="btn-book" style="display:none;">Save</button>
+      </div>
+      <div class="modal-actions-right">
+        <button id="btnDelete" class="ticket-btn">Delete</button>
+        <button id="btnClose" class="ticket-btn">Close</button>
+      </div>
+    </footer>
+
+    <!-- inline delete confirmation (appears when Delete clicked) -->
+    <div id="deleteConfirm" class="delete-confirm" style="display:none;">
+      <p>Are you sure you want to delete this exhibition?</p>
+      <button id="confirmDelete" class="ticket-btn">Yes, delete</button>
+      <button id="cancelDelete" class="ticket-btn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+<section class="con-boby" id="contact">
+  <div class="exhibition-grid">
+  
+  <div class="card card-info">
+    <div class="card-header">
+      <i class="bi bi-clock"></i> TODAY
+    </div>
+    <div class="card-content">
+      <p>Open Until <strong>06:00PM</strong></p>
+      <div class="ticket-info">
+        <h4><i class="bi bi-ticket"></i> TICKET</h4>
+        <ul>
+          <li>Adult: <strong>$20</strong></li>
+          <li>Student & Children: <strong>$10</strong></li>
+          <li>Seniors: <strong>$15</strong></li>
+        </ul>
+      </div>
+      <div class="schedule">
+        <div class="day">
+          <span>THU - SAT</span>
+          <span>09:00AM To 06:00PM</span>
+        </div>
+        <div class="day closed">
+          <span>MON</span>
+          <span>Closed <i class="bi bi-info-circle"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-workshop">
+    <img src="image/suda.png" alt="Our Workshop">
+    <div class="overlay">
+      <h3>Our Workshop</h3>
+      <div class="dates">
+        <span>14 Feb</span>
+        <span>24 Feb</span>
+        <span>30 Feb</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-winter">
+    <img src="image/tuda.png" alt="Winter Wonderlands">
+    <div class="overlay">
+      <h3>Winter Wonderlands</h3>
+      <p>This interactive artmaking workshop supports the artistic talents of diverse artists.</p>
+      <div class="time">10:00AM To 03:00PM</div>
+      <button class="btn-arrow"><i class="bi bi-arrow-right"></i></button>
+    </div>
+  </div>
+
+  
+  <div class="card card-creatures">
+    <h3>About ... </h3>
+    <p>We believe that art is not about perfection — it’s about expression.
+Our mission is to make art accessible, personal, and alive.
+Each exhibition tells a story — and maybe one of them is yours.</p>
+    <div class="time">03:00PM To 06:00PM</div>
+    <button class="btn-arrow"><i class="bi bi-arrow-right"></i></button>
+  </div>
+</div>
+
+
+
+</section>
+
+  <footer>
+    <div class="social-links" aria-label="social links">
+      <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" aria-label="Email"><i class="bi bi-envelope-at-fill"></i></a>
+    </div>
+
+    <p>Contact: <a href="mailto:info@theartgallery.com">241423@astanait.edu</a> | +7 (705) 555-5555</p>
+    <p class="copyright">&copy; 2025 The Art Gallery. All rights reserved.</p>
+  </footer>
+
+  
+  
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

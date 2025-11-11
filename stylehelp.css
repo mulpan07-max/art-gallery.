@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.con-boby {
+  background: #000;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.exhibition-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+
+.card-info {
+  background: #f5e8d0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.card-info .card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.card-info .ticket-info h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.card-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.card-info li {
+  margin: 5px 0;
+}
+
+.card-info .schedule {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.card-info .schedule .day.closed span:last-child {
+  color: #ff6b6b;
+}
+
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.card .overlay {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.6);
+
+  backdrop-filter: blur(3px);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-workshop .overlay,
+.card-winter .overlay {
+  padding: 25px;
+}
+
+.card-workshop h3,
+.card-winter h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-workshop .dates {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.card-winter p {
+  margin: 10px 0 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card-winter .time,
+.card-creatures .time {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.btn-arrow {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s;
+}
+
+.btn-arrow:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+.card-creatures {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-creatures h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.card-creatures p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .exhibition-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .card-info {
+    padding: 20px;
+  }
+
+  .card-workshop .overlay,
+  .card-winter .overlay {
+    padding: 20px;
+  }
+}
